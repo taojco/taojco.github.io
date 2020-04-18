@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>taojco&#39;s blog</title>
   
-  <subtitle>不忘初心</subtitle>
+  <subtitle>精诚所至，金石为开</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lokione.top/"/>
-  <updated>2020-04-18T09:48:47.887Z</updated>
+  <updated>2020-04-18T15:23:13.135Z</updated>
   <id>http://lokione.top/</id>
   
   <author>
@@ -20,8 +20,8 @@
     <title>ZooKeeper和Dubbo的对比</title>
     <link href="http://lokione.top/ZooKeeper%E5%92%8CDubbo%E7%9A%84%E5%AF%B9%E6%AF%94/"/>
     <id>http://lokione.top/ZooKeeper%E5%92%8CDubbo%E7%9A%84%E5%AF%B9%E6%AF%94/</id>
-    <published>2020-04-18T09:46:04.163Z</published>
-    <updated>2020-04-18T09:48:47.887Z</updated>
+    <published>2020-04-18T14:53:26.000Z</published>
+    <updated>2020-04-18T15:23:13.135Z</updated>
     
     <summary type="html">
     
@@ -36,15 +36,21 @@
     </summary>
     
     
+      <category term="学习笔记" scheme="http://lokione.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="Zookeeper" scheme="http://lokione.top/tags/Zookeeper/"/>
+    
+      <category term="Dubbo" scheme="http://lokione.top/tags/Dubbo/"/>
     
   </entry>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://lokione.top/hello-world/"/>
-    <id>http://lokione.top/hello-world/</id>
-    <published>2020-04-18T09:17:03.540Z</published>
-    <updated>2020-04-18T09:17:03.541Z</updated>
+    <title>VUE的基础语法</title>
+    <link href="http://lokione.top/VUE%E7%9A%84%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"/>
+    <id>http://lokione.top/VUE%E7%9A%84%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</id>
+    <published>2020-04-18T14:47:36.000Z</published>
+    <updated>2020-04-18T15:22:43.174Z</updated>
     
     <summary type="html">
     
@@ -52,13 +58,19 @@
       
         
         
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+          &lt;h6 id=&quot;双向数据绑定demo&quot;&gt;&lt;a href=&quot;#双向数据绑定demo&quot; class=&quot;headerlink&quot; title=&quot;双向数据绑定demo&quot;&gt;&lt;/a&gt;双向数据绑定demo&lt;/h6&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;!DOCTYPE
         
       
     
     </summary>
     
     
+      <category term="学习笔记" scheme="http://lokione.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="VUE" scheme="http://lokione.top/tags/VUE/"/>
+    
+      <category term="语法" scheme="http://lokione.top/tags/%E8%AF%AD%E6%B3%95/"/>
     
   </entry>
   
