@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>VUE的基础语法笔记 | taojco&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="双向数据绑定demo1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;    &lt;meta chars">
+<meta property="og:type" content="article">
+<meta property="og:title" content="VUE的基础语法笔记">
+<meta property="og:url" content="http://lokione.top/VUE%E7%9A%84%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="taojco&#39;s blog">
+<meta property="og:description" content="双向数据绑定demo1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;    &lt;meta chars">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-04-18T09:56:00.000Z">
+<meta property="article:modified_time" content="2020-04-18T09:57:09.551Z">
+<meta property="article:author" content="taojco">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="taojco&#39;s blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">taojco&#39;s blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">不忘初心</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://lokione.top"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-VUE的基础语法笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/VUE%E7%9A%84%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/" class="article-date">
+  <time datetime="2020-04-18T09:56:00.000Z" itemprop="datePublished">2020-04-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      VUE的基础语法笔记
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h6 id="双向数据绑定demo"><a href="#双向数据绑定demo" class="headerlink" title="双向数据绑定demo"></a>双向数据绑定demo</h6><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>vue基础笔记<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.jsdelivr.net/npm/vue/dist/vue.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"my"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">&lt;!-- &lt;input type="text" v-model="msg"/&gt; --&gt;</span></span><br><span class="line">   <span class="comment">&lt;!-- &lt;ul&gt;</span></span><br><span class="line"><span class="comment">        &lt;li v-for="(v,i) in arr"&gt;&#123;&#123;v&#125;&#125;===&#123;&#123;i&#125;&#125;&lt;/li&gt;</span></span><br><span class="line"><span class="comment">   &lt;/ul&gt; --&gt;</span></span><br><span class="line">   <span class="comment">&lt;!-- &lt;button type="" v-on:click="action"&gt;click&lt;/button&gt; --&gt;</span></span><br><span class="line">   <span class="comment">&lt;!-- &lt;button type="" v-show="flag"&gt;show&lt;/button&gt; --&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">:disabled</span>=<span class="string">"value=='a'"</span> <span class="attr">v-model</span>=<span class="string">"value"</span>/&gt;</span>  <span class="comment">&lt;!--input输入a禁用--&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">v-model</span>=<span class="string">"flag"</span>&gt;</span>&#123;&#123;flag&#125;&#125;  <span class="comment">&lt;!--复选框--&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">v-model</span>=<span class="string">"flagN"</span> <span class="attr">value</span>=<span class="string">"a"</span>&gt;</span>a</span><br><span class="line">   <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">v-model</span>=<span class="string">"flagN"</span> <span class="attr">value</span>=<span class="string">"b"</span>&gt;</span>b</span><br><span class="line">   <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">v-model</span>=<span class="string">"flagN"</span> <span class="attr">value</span>=<span class="string">"c"</span>&gt;</span>c</span><br><span class="line">   <span class="tag">&lt;<span class="name">span</span>&gt;</span>&#123;&#123;flagN&#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">   <span class="comment">&lt;!--单选框--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"test"</span> <span class="attr">v-model</span>=<span class="string">"radioA"</span> <span class="attr">value</span>=<span class="string">"1"</span>&gt;</span>男</span><br><span class="line">         <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"radio"</span> <span class="attr">name</span>=<span class="string">"test"</span> <span class="attr">v-model</span>=<span class="string">"radioA"</span> <span class="attr">value</span>=<span class="string">"2"</span>&gt;</span>女</span><br><span class="line">         <span class="tag">&lt;<span class="name">span</span>&gt;</span>&#123;&#123;radioA&#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--下拉框--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">select</span> <span class="attr">v-model</span>=<span class="string">"selt"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">option</span> <span class="attr">v-for</span>=<span class="string">"item in items"</span> <span class="attr">:value</span>=<span class="string">"item.value"</span>&gt;</span>&#123;&#123;item.text&#125;&#125;<span class="tag">&lt;/<span class="name">option</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span>&gt;</span>&#123;&#123;selt&#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--修饰符--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">v-model.trim</span>=<span class="string">"msg"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"number"</span> <span class="attr">v-model.number</span>=<span class="string">"num"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">       <span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"></span><br><span class="line"><span class="actionscript">         <span class="keyword">new</span> Vue(&#123;</span></span><br><span class="line"><span class="actionscript">            el:<span class="string">'#my'</span>,       <span class="comment">//2.0不允许挂载到html上，body元素上。</span></span></span><br><span class="line">            data:&#123;</span><br><span class="line"><span class="actionscript">                msg:<span class="string">'hello vue'</span>,</span></span><br><span class="line"><span class="actionscript">                name:<span class="string">'yuze'</span>,</span></span><br><span class="line">                age:22,</span><br><span class="line"><span class="actionscript">                flag:<span class="literal">true</span>,</span></span><br><span class="line"><span class="actionscript">                arr:[<span class="string">'a'</span>,<span class="string">'b'</span>,<span class="string">'c'</span>],</span></span><br><span class="line">                flagN:[],</span><br><span class="line"><span class="actionscript">                radioA:<span class="string">"1"</span>,</span></span><br><span class="line"><span class="actionscript">                obj:&#123;id:<span class="number">1</span>,name:<span class="string">'aaa'</span>&#125;,</span></span><br><span class="line"><span class="actionscript">                obj2:[&#123;name:<span class="string">'a1'</span>,age:<span class="number">10</span>&#125;,&#123;name:<span class="string">'a2'</span>,age:<span class="number">30</span>&#125;],</span></span><br><span class="line"><span class="actionscript">                items:[&#123;text:<span class="string">'laoshi'</span>,value:<span class="string">'1'</span>&#125;,&#123;text:<span class="string">'fsadfa'</span>,value:<span class="string">'2'</span>&#125;,&#123;text:<span class="string">'fas'</span>,value:<span class="string">'3'</span>&#125;],</span></span><br><span class="line"><span class="actionscript">                selt:<span class="string">'2'</span></span></span><br><span class="line">            &#125;,</span><br><span class="line">            methods:&#123;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">         &#125;);</span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://lokione.top/VUE%E7%9A%84%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/" data-id="ck95ifigv0001jgnr6gx709s1" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/ZooKeeper%E5%92%8CDubbo%E7%9A%84%E5%AF%B9%E6%AF%94/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">ZooKeeper和Dubbo的对比</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">四月 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/VUE%E7%9A%84%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95%E7%AC%94%E8%AE%B0/">VUE的基础语法笔记</a>
+          </li>
+        
+          <li>
+            <a href="/ZooKeeper%E5%92%8CDubbo%E7%9A%84%E5%AF%B9%E6%AF%94/">ZooKeeper和Dubbo的对比</a>
+          </li>
+        
+          <li>
+            <a href="/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 taojco<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
