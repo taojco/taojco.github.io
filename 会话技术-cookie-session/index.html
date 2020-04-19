@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="VUE的基础语法, taojco&#39;s blog">
+    <meta name="keywords" content="会话技术(cookie&amp;session), taojco&#39;s blog">
     <meta name="description" content="我搬到谁的隔壁，谁成了我的邻居，生命中最好的事情就是遇见，你好！">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>VUE的基础语法 | taojco&#39;s blog</title>
+    <title>会话技术(cookie&amp;session) | taojco&#39;s blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -309,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">VUE的基础语法</h1>
+                    <h1 class="description center-align post-title">会话技术(cookie&amp;session)</h1>
                 </div>
             </div>
         </div>
@@ -431,12 +431,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/VUE/">
-                                <span class="chip bg-color">VUE</span>
-                            </a>
-                        
-                            <a href="/tags/%E8%AF%AD%E6%B3%95/">
-                                <span class="chip bg-color">语法</span>
+                            <a href="/tags/cooike-session/">
+                                <span class="chip bg-color">cooike,session</span>
                             </a>
                         
                     </div>
@@ -460,7 +456,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-04-18
+                    2020-04-19
                 </div>
                 
 
@@ -476,74 +472,93 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h6 id="双向数据绑定demo"><a href="#双向数据绑定demo" class="headerlink" title="双向数据绑定demo"></a>双向数据绑定demo</h6><pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8" /&gt;
-    &lt;title&gt;vue基础笔记&lt;/title&gt;
-  &lt;script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;div id="my"&gt;
+                <center>会话技术(cookie&amp;session)</center>
 
-  &lt;!-- &lt;input type="text" v-model="msg"/&gt; --&gt;
-   &lt;!-- &lt;ul&gt;
-        &lt;li v-for="(v,i) in arr"&gt;{{v}}==={{i}}&lt;/li&gt;
-   &lt;/ul&gt; --&gt;
-   &lt;!-- &lt;button type="" v-on:click="action"&gt;click&lt;/button&gt; --&gt;
-   &lt;!-- &lt;button type="" v-show="flag"&gt;show&lt;/button&gt; --&gt;
-   &lt;input type="text" :disabled="value=='a'" v-model="value"/&gt;  &lt;!--input输入a禁用--&gt;
-   &lt;input type="checkbox" v-model="flag"&gt;{{flag}}  &lt;!--复选框--&gt;
-   &lt;input type="checkbox" v-model="flagN" value="a"&gt;a
-   &lt;input type="checkbox" v-model="flagN" value="b"&gt;b
-   &lt;input type="checkbox" v-model="flagN" value="c"&gt;c
-   &lt;span&gt;{{flagN}}&lt;/span&gt;
-   &lt;!--单选框--&gt;
-    &lt;div&gt;
-        &lt;input type="radio" name="test" v-model="radioA" value="1"&gt;男
-         &lt;input type="radio" name="test" v-model="radioA" value="2"&gt;女
-         &lt;span&gt;{{radioA}}&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;!--下拉框--&gt;
-    &lt;div&gt;
-        &lt;select v-model="selt"&gt;
-            &lt;option v-for="item in items" :value="item.value"&gt;{{item.text}}&lt;/option&gt;
-        &lt;/select&gt;
-        &lt;span&gt;{{selt}}&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;!--修饰符--&gt;
-    &lt;div&gt;
-        &lt;input type="text" v-model.trim="msg"/&gt;
-        &lt;input type="number" v-model.number="num"/&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-    &lt;script&gt;
-       window.onload = function(){
-
-         new Vue({
-            el:'#my',       //2.0不允许挂载到html上，body元素上。
-            data:{
-                msg:'hello vue',
-                name:'yuze',
-                age:22,
-                flag:true,
-                arr:['a','b','c'],
-                flagN:[],
-                radioA:"1",
-                obj:{id:1,name:'aaa'},
-                obj2:[{name:'a1',age:10},{name:'a2',age:30}],
-                items:[{text:'laoshi',value:'1'},{text:'fsadfa',value:'2'},{text:'fas',value:'3'}],
-                selt:'2'
-            },
-            methods:{
-
-            }
-         });
-       }
-
-    &lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre><script>
+<h3 id="1-什么是会话技术？"><a href="#1-什么是会话技术？" class="headerlink" title="1 什么是会话技术？"></a>1 什么是会话技术？</h3><p>会话：当打开一个浏览器的时候，意味会话开始了</p>
+<p>​      浏览器可以和服务器进行N多次的信息交互</p>
+<p>​      当关闭浏览器的时候，意味着会话结束了</p>
+<h3 id="2-会话技术的作用？"><a href="#2-会话技术的作用？" class="headerlink" title="2 会话技术的作用？"></a>2 会话技术的作用？</h3><p>作用：用来存储浏览器和服务器在会话交互过程中产生的N多数据(cookie session)</p>
+<h3 id="3-会话技术的分类？"><a href="#3-会话技术的分类？" class="headerlink" title="3 会话技术的分类？"></a>3 会话技术的分类？</h3><p>客户端会话技术(cookie)：会将存储的数据保存在cookie中，整个cookie在浏览器端</p>
+<p>服务器端会话技术(session)：会将存储的数据保存在session中,整个session在服务器上</p>
+<h3 id="4-为什么要将数据存入到cookie或者session中"><a href="#4-为什么要将数据存入到cookie或者session中" class="headerlink" title="4 为什么要将数据存入到cookie或者session中?"></a>4 为什么要将数据存入到cookie或者session中?</h3><p><img src="http://192.168.1.101:8600/ckEditorUploadImg/1577935514660.png" alt="img"></p>
+<h2 id="一-客户端的会话技术-cookie"><a href="#一-客户端的会话技术-cookie" class="headerlink" title="一 客户端的会话技术:cookie"></a>一 客户端的会话技术:cookie</h2><h3 id="1-什么是cookie-cookie有什么作用"><a href="#1-什么是cookie-cookie有什么作用" class="headerlink" title="1 什么是cookie? cookie有什么作用?"></a>1 什么是cookie? cookie有什么作用?</h3><p>cookie: 小纸条 </p>
+<p>作用：存储数据的（浏览器和服务器交互产生的数据）</p>
+<p>特点：cookie是由服务器创建给浏览器保存的</p>
+<h3 id="2-如何使用cookie？"><a href="#2-如何使用cookie？" class="headerlink" title="2 如何使用cookie？"></a>2 如何使用cookie？</h3><p>2.1 服务器如何给客户端写小纸条(cookie)         </p>
+<p>Cookie cookie=new Cookie(String,String);</p>
+<p>2.2 服务器如果把小纸条(cookie)传递给客户端</p>
+<p>response.addCookie(cookie);</p>
+<p>注意：服务器可以给浏览器传递多个cookie,浏览器都会保存 但存在key值覆盖</p>
+<h3 id="3-服务器端如何获取到浏览器传递的cookie信息？"><a href="#3-服务器端如何获取到浏览器传递的cookie信息？" class="headerlink" title="3 服务器端如何获取到浏览器传递的cookie信息？"></a>3 服务器端如何获取到浏览器传递的cookie信息？</h3><p>request.getCookies(); //自动从请求头中获取cookie信息 并且切割并封装成多个cookie对象</p>
+<h3 id="4-cookie的常用API"><a href="#4-cookie的常用API" class="headerlink" title="4 cookie的常用API"></a>4 cookie的常用API</h3><p>getName();   返回值String，返回的是cookie的key</p>
+<p>getValue();  返回值String，返回的是cookie的value</p>
+<h3 id="5-会话级别的cookie和持久化级别的cookie"><a href="#5-会话级别的cookie和持久化级别的cookie" class="headerlink" title="5 会话级别的cookie和持久化级别的cookie"></a>5 会话级别的cookie和持久化级别的cookie</h3><p>不同的浏览器不能共享cookie</p>
+<p>cookie默认是会话级别的                       </p>
+<p>会话级别的cookie：浏览器关闭当前会话默认会把保存的cookie全部销毁  </p>
+<p>持久化级别的cookie：可以让浏览器在一定时间不论开关都会保留cookie</p>
+<p>方法:setMaxAge(秒)</p>
+<p>​           &gt;0: 有效时间</p>
+<p>​           =0：过期(清除)</p>
+<p>特点：设置的时间如果到期了，cookie也会自动销毁</p>
+<h3 id="6-cookie的路径"><a href="#6-cookie的路径" class="headerlink" title="6 cookie的路径"></a>6 cookie的路径</h3><p>  通过设置cookie的路径 设置该cookie在哪些资源下有效</p>
+<p>方法：setPath(“路径”)</p>
+<p> /day10/cs5   只在访问/day10/cs5资源才带</p>
+<p> /day10      访问整个day10项目下的资源都带（这种）</p>
+<p> /                访问整个服务器上的项目资源都带        </p>
+<p> 默认             当前servlet访问路径的上一级</p>
+<p>访问到当前servlet的上一级路径才带</p>
+<p>例如：Servlet: /demo/sd1==访问/web/demo下的资源才携带</p>
+<h3 id="7-cookie的细节："><a href="#7-cookie的细节：" class="headerlink" title="7 cookie的细节："></a>7 cookie的细节：</h3><p>cookie中不能出现特殊符号 例如：空格 分号 逗号  （案例解决）</p>
+<p>cookie存入的数据有大小限制 4kb</p>
+<h2 id="二-服务器端的会话技术-session"><a href="#二-服务器端的会话技术-session" class="headerlink" title="二 服务器端的会话技术:session"></a>二 服务器端的会话技术:session</h2><h3 id="1-Session是什么？作用？"><a href="#1-Session是什么？作用？" class="headerlink" title="1  Session是什么？作用？"></a>1  Session是什么？作用？</h3><p>session是保存在服务器端的会话技术</p>
+<p>作用：也是为了保存会话中产生的数据</p>
+<p>特点  Session是一个域对象  也可以做多个servlet之间的数据传递和共享</p>
+<p>方法：XXXAttribute()</p>
+<p>获取：request.getSession()</p>
+<p>作用范围：数据只在当前的会话中才有效</p>
+<p>  因为当前会话中不论访问多少个servlet获取的都是同一个session</p>
+<h3 id="2-session的剖析"><a href="#2-session的剖析" class="headerlink" title="2  session的剖析"></a>2  session的剖析</h3><p>  2.1 如何保证在一次会话中，保证使用的都是同一个session对象?</p>
+<p>  Cookie:</p>
+<p>​      JSESSIONID=C96896433E2D3CDA169EF754BAD75EAB</p>
+<p>​      JSESSIONID=C96896433E2D3CDA169EF754BAD75EAB  </p>
+<p>  2.2 为什么浏览器关闭以后，使用的就不是同一个对象了？</p>
+<p>​      cookie销毁了 JSESSIONID不存在了</p>
+<h3 id="3-getSession-方法的实现流程"><a href="#3-getSession-方法的实现流程" class="headerlink" title="3  getSession()方法的实现流程"></a>3  getSession()方法的实现流程</h3><p>调用getSession方法时，首先判断cookie中是否有jsessionid。</p>
+<p>如果不存在jsessionid，那么直接创建一个新的session对象返回给你，</p>
+<p>并且向响应头中写一个新的jsessionid存放cookie给浏览器。</p>
+<p>如果存在jsessionid,从服务器内存中去获取对应的session对象。</p>
+<p>（浏览器关闭）再次判断cookie中是否有jsessionid，如果没有，那么直接创建一个新的session对象返回给你，并且向响应头中写一个新的jsessionid存放cookie给浏览器。</p>
+<h3 id="4-实现关闭浏览器继续可以访问到session数据"><a href="#4-实现关闭浏览器继续可以访问到session数据" class="headerlink" title="4  实现关闭浏览器继续可以访问到session数据"></a>4  实现关闭浏览器继续可以访问到session数据</h3><p>   方法：session.getId() 获取session的jsessionid</p>
+<p>获取当前session的jsessionid写回给浏览器</p>
+<h3 id="5-session和cookie的区别？"><a href="#5-session和cookie的区别？" class="headerlink" title="5  session和cookie的区别？"></a>5  session和cookie的区别？</h3><p>   session:服务器端的会话技术 数据都在服务器</p>
+<p>   cookie:客户端的会话技术 数据都在浏览器</p>
+<p>   session:存储的内容没有大小限制</p>
+<p>   cookie：只能存储4kb的内容</p>
+<p>   session：存储的数据安全</p>
+<p>   cookie:  存储的数据不安全</p>
+<p>技术分析：初始jsp</p>
+<p>jsp：能写java代码的html页面  组成：html代码+jsp代码+java代码</p>
+<p>脚本：&lt;% %&gt; java程序片段  &lt;%= %&gt; 程序的页面输出  </p>
+<p>作用：接受servlet产生的数据做显示</p>
+<p>8 域对象的总结 创建 销毁 数据作用范围</p>
+<p>Request</p>
+<p>创建：请求一次 创建一次</p>
+<p>销毁：响应回去即销毁</p>
+<p>作用范围：数据只在一次请求多次转发下才能共享</p>
+<p>ServletContext</p>
+<p>创建：服务器启动创建 且只有一个</p>
+<p>销毁：服务器关闭销毁</p>
+<p>作用范围：在当前项目下数据都能共享</p>
+<p>Session</p>
+<p>创建：java认为当浏览器第一次访问到request.getSession方法的时候 创建session对象</p>
+<p>销毁：</p>
+<p> 1 主动销毁  invalidate()</p>
+<p> 2 被动销毁  默认30分钟不使用自动销毁 </p>
+<p> 3 服务器非正常关闭 （服务器正常关闭session不销毁）</p>
+<p>作用范围：数据在一次会话中有效</p>
+<p>  在一次会话中的多个servlet中获取的session都是同一个</p>
+<p>只要多个servlet/jsp之间做数据传递和共享了，都要想到以上域对象</p>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -586,7 +601,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://lokione.top/VUE%E7%9A%84%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">http://lokione.top/VUE%E7%9A%84%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</a>
+                    <a href="http://lokione.top/%E4%BC%9A%E8%AF%9D%E6%8A%80%E6%9C%AF-cookie-session/">http://lokione.top/%E4%BC%9A%E8%AF%9D%E6%8A%80%E6%9C%AF-cookie-session/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -624,12 +639,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/VUE/">
-                                    <span class="chip bg-color">VUE</span>
-                                </a>
-                            
-                                <a href="/tags/%E8%AF%AD%E6%B3%95/">
-                                    <span class="chip bg-color">语法</span>
+                                <a href="/tags/cooike-session/">
+                                    <span class="chip bg-color">cooike,session</span>
                                 </a>
                             
                         </div>
@@ -671,9 +682,65 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/%E4%BC%9A%E8%AF%9D%E6%8A%80%E6%9C%AF-cookie-session/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="会话技术(cookie&amp;session)">
+                        
+                        <span class="card-title">会话技术(cookie&amp;session)</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            会话技术(cookie&amp;session)
+
+1 什么是会话技术？会话：当打开一个浏览器的时候，意味会话开始了
+​      浏览器可以和服务器进行N多次的信息交互
+​      当关闭浏览器的时候，意味着会话结束了
+2 会话技术的作
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-19
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    学习笔记
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/cooike-session/">
+                        <span class="chip bg-color">cooike,session</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/ZooKeeper%E5%92%8CDubbo%E7%9A%84%E5%AF%B9%E6%AF%94/">
                     <div class="card-image">
@@ -696,9 +763,9 @@ ZooKeeper的安装必须是建立在当前的CentOs中具有Java环境的.
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-04-18
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-18
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -720,64 +787,6 @@ ZooKeeper的安装必须是建立在当前的CentOs中具有Java环境的.
                     
                     <a href="/tags/Dubbo/">
                         <span class="chip bg-color">Dubbo</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/VUE%E7%9A%84%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="VUE的基础语法">
-                        
-                        <span class="card-title">VUE的基础语法</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            双向数据绑定demo&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8" /&gt;
-    &lt;title&gt;vue基础笔记&lt
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-04-18
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
-                                    学习笔记
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/VUE/">
-                        <span class="chip bg-color">VUE</span>
-                    </a>
-                    
-                    <a href="/tags/%E8%AF%AD%E6%B3%95/">
-                        <span class="chip bg-color">语法</span>
                     </a>
                     
                 </div>
