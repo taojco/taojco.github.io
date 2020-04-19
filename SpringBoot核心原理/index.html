@@ -475,19 +475,19 @@
                 <h4 id="一、什么是SpringBoot"><a href="#一、什么是SpringBoot" class="headerlink" title="一、什么是SpringBoot"></a>一、什么是SpringBoot</h4><p>​    SpringBoot是一个快速开发框架，快速的将一些常用的第三方依赖整合（原理：通过Maven子父工程的方式），简化XML配置，全部采用注解形式，内置Http服务器（Jetty和Tomcat），最终以java应用程序进行执行。</p>
 <h4 id="二、SpringBoot核心原理"><a href="#二、SpringBoot核心原理" class="headerlink" title="二、SpringBoot核心原理"></a>二、SpringBoot核心原理</h4><p>（1） 基于SpringMVC无配置文件（纯Java）完全注解化+内置tomcat-embed-core实现SpringBoot框架，Main函数启动。<br>（2） SpringBoot核心快速整合第三方框架原理:Maven继承依赖关系。</p>
 <h4 id="三、SpringBoot重点"><a href="#三、SpringBoot重点" class="headerlink" title="三、SpringBoot重点"></a>三、SpringBoot重点</h4><p>​    springboot 通过引用spring-boot-starter-web依赖，整合SpingMVC框架。只需要引用一个jar包，就可以通过Maven继承的方式引用到Spring-aop,Spring-beans,Spring-core,Spring-web等相关依赖。</p>
-<h5 id="3-1-快速整合第三方依赖：maven子父依赖关系。"><a href="#3-1-快速整合第三方依赖：maven子父依赖关系。" class="headerlink" title="3.1:快速整合第三方依赖：maven子父依赖关系。"></a>3.1:快速整合第三方依赖：maven子父依赖关系。</h5><pre class=" language-Java"><code class="language-Java"><parent> 
-<groupId>org.springframework.boot</groupId> 
-<artifactId>spring-boot-starter-parent</artifactId> 
-<version>2.0.0.RELEASE</version> 
-</parent> 
-<dependencies> 
-<!-- SpringBoot 整合SpringMVC --> 
-<!-- 为什么我们映入spring-boot-starter-web 能够帮我整合Spring环境 原理通过Maven子父 工程 --> 
-<dependency> 
-<groupId>org.springframework.boot</groupId> 
-<artifactId>spring-boot-starter-web</artifactId> 
-</dependency>
-</dependencies></code></pre>
+<h5 id="3-1-快速整合第三方依赖：maven子父依赖关系。"><a href="#3-1-快速整合第三方依赖：maven子父依赖关系。" class="headerlink" title="3.1:快速整合第三方依赖：maven子父依赖关系。"></a>3.1:快速整合第三方依赖：maven子父依赖关系。</h5><pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>parent</span><span class="token punctuation">></span></span> 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span> 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-boot-starter-parent<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span> 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>version</span><span class="token punctuation">></span></span>2.0.0.RELEASE<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>version</span><span class="token punctuation">></span></span> 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>parent</span><span class="token punctuation">></span></span> 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependencies</span><span class="token punctuation">></span></span> 
+<span class="token comment" spellcheck="true">&lt;!-- SpringBoot 整合SpringMVC --></span> 
+<span class="token comment" spellcheck="true">&lt;!-- 为什么我们映入spring-boot-starter-web 能够帮我整合Spring环境 原理通过Maven子父 工程 --></span> 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span> 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span> 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-boot-starter-web<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span> 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependency</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dependencies</span><span class="token punctuation">></span></span></code></pre>
 <h5 id="3-2：完全无配置文件（采用注解化）"><a href="#3-2：完全无配置文件（采用注解化）" class="headerlink" title="3.2：完全无配置文件（采用注解化）"></a>3.2：完全无配置文件（采用注解化）</h5><p>springboot没有配置文件，如何进行初始化？</p>
 <p>在没有web.xml配置文件的情况，通过java代码操作整个SpringMVC的初始化过程，java代码最终会生成class文件,内置Tomcat就会加载这些class文件，当所有程序加载完成后，项目就可以访问了。</p>
 <p>以前的web项目，通过Web.xml配置文件加载整个项目流程。<br><img src="en-resource://database/2452:1" alt="0886a6ec58053ab6a63370f46bba7057.png"><br><img src="en-resource://database/2454:1" alt="ba95bcabf3597032d1862226b2fa1377.png"><br>没有web.xml文件，那么Tomcat是如何启动（注解在什么时候产生）？</p>
