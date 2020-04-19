@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>taojco&#39;s blog</title>
   
-  <subtitle>把耳朵叫醒</subtitle>
+  <subtitle>叫醒耳朵</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://lokione.top/"/>
@@ -241,9 +241,9 @@
       <category term="学习笔记" scheme="http://lokione.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="语法" scheme="http://lokione.top/tags/%E8%AF%AD%E6%B3%95/"/>
-    
       <category term="Github" scheme="http://lokione.top/tags/Github/"/>
+    
+      <category term="语法" scheme="http://lokione.top/tags/%E8%AF%AD%E6%B3%95/"/>
     
   </entry>
   
@@ -566,9 +566,9 @@
       <category term="学习笔记" scheme="http://lokione.top/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-      <category term="VUE" scheme="http://lokione.top/tags/VUE/"/>
-    
       <category term="语法" scheme="http://lokione.top/tags/%E8%AF%AD%E6%B3%95/"/>
+    
+      <category term="VUE" scheme="http://lokione.top/tags/VUE/"/>
     
   </entry>
   
